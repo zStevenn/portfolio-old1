@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Set font family for headings to Lora */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Lora';
+  }
+
+  /* Set font family for other text to Inter */
+  label,
+  p,
+  span {
+    font-family: 'Inter';
+  }
+
+  /* Set default styling for text components */
+  h1 {
+    @apply text-4xl font-semibold text-teal-900;
+  }
+
+  h2 {
+    @apply text-3xl font-semibold text-teal-900;
+  }
+
+  h3 {
+    @apply text-2xl font-semibold text-teal-900;
+  }
+
+  h4 {
+    @apply text-xl font-semibold text-teal-900;
+  }
+
+  h5 {
+    @apply text-lg font-semibold text-teal-900;
+  }
+
+  h6 {
+    @apply text-base font-semibold text-teal-900;
+  }
+
+  p,
+  span {
+    @apply text-base;
+  }
+
+  a {
+    @apply underline underline-offset-2 font-medium;
+  }
+
+  label {
+    @apply text-sm;
+  }
+}
