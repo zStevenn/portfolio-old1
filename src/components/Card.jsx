@@ -11,7 +11,7 @@ function Card({
   return (
     <div className="rounded-md flex flex-col border border-teal-900 shadow-md shadow-teal-900/30">
       <img
-        className="rounded-tr-md rounded-tl-md h-44 border-b border-teal-900"
+        className="rounded-tr-md rounded-tl-md h-44 border-b border-teal-900 object-cover"
         src={imgSrc}
         alt={imgTitle}
         title={imgTitle}

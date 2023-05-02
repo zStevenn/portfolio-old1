@@ -3,7 +3,8 @@ import { Card } from '../components/Card';
 import { BsTwitter, BsLinkedin, BsCode } from 'react-icons/bs';
 import { FaFigma, FaReact } from 'react-icons/fa';
 import { SiNetlify, SiTailwindcss } from 'react-icons/si';
-// import project1 from '../assets/project/project-1-mob.png';
+import projectImage1 from '../assets/project/project-1-mob.png';
+import projectImage2 from '../assets/project/project-2-mob.png';
 
 export default function Home() {
   return (
@@ -40,14 +41,14 @@ export default function Home() {
         <h3 className="pb-4">Projecten</h3>
         <div className="grid grid-cols-1 gap-4">
           <Card
-            imgSrc="https://via.placeholder.com/400x200"
+            imgSrc={projectImage1}
             imgTitle="Cafetaria de Sluis"
             cardTitle="Cafetaria de Sluis"
             cardDate="December 2022 - Lopend"
             cardDescription="UI/UX Design, Software development &#38; Lancering van de website."
           />
           <Card
-            imgSrc="https://via.placeholder.com/400x200"
+            imgSrc={projectImage2}
             imgTitle="Steven’s To-Do"
             cardTitle="Steven’s To-Do"
             cardDate="Januari 2023 - Lopend"
