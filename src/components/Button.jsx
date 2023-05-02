@@ -1,6 +1,13 @@
 // Default button
-function Button({ size = 'medium', variant = 'primary', children, className }) {
-  // Switch size based
+function Button({
+  type = 'external',
+  size = 'medium',
+  variant = 'primary',
+  children,
+  link = '',
+  className,
+}) {
+  // Add styles based on selected size
   const getSize = () => {
     switch (size) {
       case 'small':
@@ -14,6 +21,7 @@ function Button({ size = 'medium', variant = 'primary', children, className }) {
     }
   };
 
+  // Add styles based on selected variant
   const getVariant = () => {
     switch (variant) {
       case 'primary':
@@ -28,11 +36,26 @@ function Button({ size = 'medium', variant = 'primary', children, className }) {
   // Put all styles in a variable
   const styles = `rounded-md transition duration-300 ease-in ${getVariant()} ${getSize()} ${className}`;
 
-  return (
-    <button className={styles}>
-      <span className="truncate">{children}</span>
-    </button>
-  );
+  // Return different types of buttons depending on action of button
+  if (type === 'external') {
+    return (
+      <a href={link}>
+        <button className={styles}>
+          <span className="truncate">{children}</span>
+        </button>
+      </a>
+    );
+  }
+
+  if (type === 'download') {
+    return (
+      <a href={link} download>
+        <button className={styles}>
+          <span className="truncate">{children}</span>
+        </button>
+      </a>
+    );
+  }
 }
 
 export { Button };

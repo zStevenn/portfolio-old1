@@ -22,7 +22,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <h3 className="text-center">&copy; Steven Li</h3>
+        <h6 className="text-center py-2">&copy; Steven Li</h6>
       </footer>
     </>
   );

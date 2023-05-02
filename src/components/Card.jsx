@@ -1,6 +1,5 @@
 import { Button } from './Button';
 
-// Default card
 function Card({
   imgSrc,
   imgTitle,
