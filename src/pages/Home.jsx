@@ -97,16 +97,13 @@ export default function Home() {
       <div className="container mx-auto max-w-screen-lg p-8">
         <h3 className="pb-4">Over mij</h3>
         <p className="text-neutral-500 pb-4">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
-          turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec
-          fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus
-          elit sed risus. Maecenas eget condimentum velit, sit amet feugiat
-          lectus. Class aptent taciti sociosqu ad litora torquent per conubia
-          nostra, per inceptos himenaeos. Praesent auctor purus luctus enim
-          egestas, ac scelerisque ante pulvinar. Donec ut rhoncus ex.
-          Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel bibendum
-          lorem. Morbi convallis convallis diam sit amet lacinia. Aliquam in
-          elementum tellus.
+          Ten eerste, bedankt voor het bezoeken van mijn portfolio! Mijn naam is
+          Steven, een ambitieuze (junior) software developer &#38; UI/UX
+          designer, momenteel werkzaam als Stagiair software developer bij
+          Sellvation Marketing B.V. Mijn voornamelijke interesses zijn momenteel
+          Front end development, waarbij mijn focus voornamelijk ligt bij het
+          continu verbeteren van user experience en webdesign in Figma dat ik
+          realiseer in React.js/Tailwind CSS projecten.
         </p>
         <h4 className="pb-4">Technologieën</h4>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -148,25 +145,25 @@ export default function Home() {
         <h4 className="pb-4">Opleidingen &#38; Certificaten</h4>
         <div className="grid grid-cols-1 gap-4 pb-4">
           <Card
-            imgSrc="https://via.placeholder.com/400x200"
-            imgTitle="Cafetaria de Sluis"
-            cardTitle="Cafetaria de Sluis"
-            cardDate="December 2022 - Lopend"
-            cardDescription="UI/UX Design, Software development &#38; Lancering van de website."
+            imgSrc="https://via.placeholder.com/400x100"
+            imgTitle="Diploma Software developer"
+            cardTitle="Diploma Software developer"
+            cardDate="MBO Utrecht - 2019 t/m 2023 - In progressie"
+            cardButton="disabled"
           />
           <Card
-            imgSrc="https://via.placeholder.com/400x200"
-            imgTitle="Steven’s To-Do"
-            cardTitle="Steven’s To-Do"
-            cardDate="Januari 2023 - Lopend"
-            cardDescription="Tech stack: React.js, Vite, Tailwind CSS, Firebase, Netlify."
+            imgSrc="https://via.placeholder.com/400x100"
+            imgTitle="Complete Web &#38; Mobile Designer: UI/UX, Figma + More"
+            cardTitle="Complete Web &#38; Mobile Designer: UI/UX, Figma + More"
+            cardDate="Udemy - 2023 - In progressie"
+            cardButton="disabled"
           />
           <Card
-            imgSrc="https://via.placeholder.com/400x200"
-            imgTitle="Improve My Habits"
-            cardTitle="Improve My Habits"
-            cardDate="Binnenkort"
-            cardDescription="UI/UX Design, Software development &#38; Lancering van de website."
+            imgSrc="https://via.placeholder.com/400x100"
+            imgTitle="Vue - The Complete Guide (incl. Router &#38; Composition API)"
+            cardTitle="Vue - The Complete Guide (incl. Router &#38; Composition API)"
+            cardDate="Udemy - 2023 - Gepland"
+            cardButton="disabled"
           />
         </div>
         <h4 className="pb-4">Persoonlijke doelen</h4>
