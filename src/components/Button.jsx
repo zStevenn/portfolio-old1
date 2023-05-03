@@ -1,3 +1,5 @@
+import pdfFile from '../assets/Steven_Li_CV_NL.pdf';
+
 // Default button
 function Button({
   type = 'external',
@@ -11,9 +13,9 @@ function Button({
   const getSize = () => {
     switch (size) {
       case 'small':
-        return '';
+        return 'text-sm h-10 px-4';
       case 'medium':
-        return 'h-10 px-7';
+        return 'text-base h-10 px-7';
       case 'large':
         return 'h-14 px-10';
       default:
@@ -34,25 +36,41 @@ function Button({
   };
 
   // Put all styles in a variable
-  const styles = `rounded-md transition duration-300 ease-in ${getVariant()} ${getSize()} ${className}`;
+  const styles = `flex items-center justify-center rounded-md transition duration-300 ease-in ${getVariant()} ${getSize()} ${className}`;
 
   // Return different types of buttons depending on action of button
   if (type === 'external') {
     return (
-      <a href={link}>
-        <button className={styles}>
-          <span className="truncate">{children}</span>
-        </button>
+      <a href={link} className={styles} target="_blank">
+        {children}
       </a>
     );
   }
 
   if (type === 'download') {
     return (
-      <a href={link} download>
-        <button className={styles}>
-          <span className="truncate">{children}</span>
-        </button>
+      <a href={pdfFile} download="Steven Li CV" className={styles}>
+        {children}
+      </a>
+    );
+  }
+
+  if (type === 'internal') {
+    return (
+      <a href={link} className={styles}>
+        {children}
+      </a>
+    );
+  }
+
+  if (type === 'mail') {
+    return (
+      <a
+        href="mailto:stevenli.inbox@gmail.com"
+        className={styles}
+        target="_blank"
+      >
+        {children}
       </a>
     );
   }

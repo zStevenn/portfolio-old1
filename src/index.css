@@ -50,10 +50,6 @@
     @apply text-base;
   }
 
-  a {
-    @apply underline underline-offset-2 font-medium;
-  }
-
   label {
     @apply text-sm;
   }
