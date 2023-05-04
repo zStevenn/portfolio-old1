@@ -70,7 +70,7 @@ export default function Home() {
       </div>
 
       {/* Laten we in contact blijven */}
-      <div className="bg-teal-900">
+      <div className="bg-gradient-to-b from-teal-900 via-teal-700 to-teal-500">
         <div className="container mx-auto max-w-screen-lg p-8">
           <div className="grid gap-4 grid-cols-1 md:grid-cols-2 md:items-center">
             <div className="grid gap-4">
