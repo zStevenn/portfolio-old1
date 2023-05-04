@@ -9,9 +9,10 @@ export default function Footer() {
           <div className="container mx-auto max-w-screen-lg p-8">
             <h3 className="pb-4 text-neutral-100">Stuur gerust een bericht.</h3>
             <div className="grid gap-4">
-              <p className="text-neutral-400">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                vulputate libero et velit interdum, ac aliquet odio mattis.
+              <p className="text-neutral-300">
+                Bedankt voor het bekijken van mijn portfolio. Als je
+                geïnteresseerd bent in mijn werk of als je vragen hebt, verneem
+                ik graag van je!
               </p>
               <div className="flex flex-col gap-4">
                 <Button type="mail" variant="secondary">

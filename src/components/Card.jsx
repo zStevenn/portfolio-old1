@@ -10,9 +10,9 @@ function Card({
   cardButton = 'enabled',
 }) {
   return (
-    <div className="rounded-md flex flex-col border border-teal-900/30 shadow-md shadow-teal-900/30 group">
+    <div className="rounded-md flex flex-col border border-teal-900/30 shadow-md shadow-teal-900/30">
       <img
-        className="rounded-tr-md rounded-tl-md h-44 object-cover transition-all group-hover:bg-neutral-900/50"
+        className="rounded-tr-md rounded-tl-md h-44 object-cover transition-all duration-300 hover:bg-neutral-900/50"
         src={imgSrc}
         alt={imgTitle}
         title={imgTitle}
@@ -21,18 +21,16 @@ function Card({
         {cardTitle && <h4>{cardTitle}</h4>}
         <div>
           {cardDate && (
-            <p className="text-neutral-500 font-semibold pb-3">{cardDate}</p>
+            <p className="text-neutral-800 font-medium pb-3">{cardDate}</p>
           )}
 
           {cardDescription && (
-            <p className="text-neutral-500 text-sm">{cardDescription}</p>
+            <p className="text-neutral-800 text-sm">{cardDescription}</p>
           )}
         </div>
         {cardButton === 'enabled' && (
           <div className="flex gap-2 items-end">
-            <Button size="small" link={cardLink}>
-              Bekijk project
-            </Button>
+            <Button link={cardLink}>Bekijk project</Button>
             {/* <a
             className="text-teal-900 text-sm truncate underline underline-offset-2"
             href="/"

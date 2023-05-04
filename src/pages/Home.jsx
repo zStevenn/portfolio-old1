@@ -1,6 +1,6 @@
 import { Button } from '../components/Button';
 import { Card } from '../components/Card';
-import { BsTwitter, BsLinkedin, BsCode } from 'react-icons/bs';
+import { BsLinkedin, BsCode } from 'react-icons/bs';
 import { FaFigma, FaReact } from 'react-icons/fa';
 import { SiNetlify, SiTailwindcss } from 'react-icons/si';
 import projectImage1 from '../assets/project-sluis.png';
@@ -17,7 +17,7 @@ export default function Home() {
       <div className="container mx-auto max-w-screen-lg px-8 pb-8 pt-28 grid gap-8 sm:grid-cols-2">
         <div className="flex flex-col justify-center gap-4">
           <h3>Heyooo.</h3>
-          <p>
+          <p className="text-neutral-800">
             Software developer met ervaring in Front-End development en UI/UX
             design. Op zoek naar de volgende uitdaging!
           </p>
@@ -28,6 +28,8 @@ export default function Home() {
                 className="h-10 w-10 group transition-all duration-300 grid place-items-center rounded-md border border-teal-900 hover:bg-teal-900 hover:shadow-md focus:bg-teal-900 focus:shadow-md"
                 href="https://www.linkedin.com/in/zstevenn/"
                 target="_blank"
+                title="LinkedIn profile"
+                alt="LinkedIn profile"
               >
                 <BsLinkedin className="text-xl transition-all duration-300 text-teal-900 group-hover:text-neutral-100 group-focus:text-neutral-100" />
               </a>
@@ -75,9 +77,9 @@ export default function Home() {
               <h3 className="pb-4 text-neutral-100">
                 Laten we in contact blijven!
               </h3>
-              <p className="text-neutral-400">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                vulputate libero et velit interdum, ac aliquet odio mattis.
+              <p className="text-neutral-300">
+                Ik ben altijd op zoek naar nieuwe uitdagingen op het gebied van
+                webdevelopment en design.
               </p>
               <div className="flex flex-col gap-4">
                 <Button type="mail" variant="secondary">
@@ -96,23 +98,26 @@ export default function Home() {
       {/* Over mij */}
       <div className="container mx-auto max-w-screen-lg p-8">
         <h3 className="pb-4">Over mij</h3>
-        <p className="text-neutral-500 pb-4">
-          Ten eerste, bedankt voor het bezoeken van mijn portfolio! Mijn naam is
-          Steven, een ambitieuze (junior) software developer &#38; UI/UX
-          designer, momenteel werkzaam als Stagiair software developer bij
-          Sellvation Marketing B.V. Mijn voornamelijke interesses zijn momenteel
-          Front end development, waarbij mijn focus voornamelijk ligt bij het
-          continu verbeteren van user experience en webdesign in Figma dat ik
-          realiseer in React.js/Tailwind CSS projecten.
+        <p className="text-neutral-800 pb-4">
+          Welkom op mijn portfolio! Mijn naam is Steven en ik ben een ambitieuze
+          (junior) software developer en UI/UX designer. Momenteel werk ik als
+          stagiair software developer bij Sellvation Marketing B.V. Mijn passie
+          ligt bij Front end development en ik ben voortdurend bezig met het
+          verbeteren van de gebruikerservaring en het ontwerpen van mooie en
+          intuïtieve webpagina's in Figma en het bouwen van deze pagina's met
+          React.js en Tailwind CSS. Ik ben altijd op zoek naar nieuwe
+          uitdagingen en projecten waarbij ik mijn vaardigheden kan toepassen en
+          verder kan ontwikkelen. Als je vragen hebt of geïnteresseerd bent in
+          het samenwerken met mij, neem dan gerust contact op.
         </p>
         <h4 className="pb-4">Technologieën</h4>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pb-4">
           <div>
-            <p className="text-neutral-500 pb-4">
+            <p className="text-neutral-800 pb-4">
               Enkele technologieën waarmee ik gewerkt heb en ervaring in mee heb
               zijn onder andere:
             </p>
-            <ul className="text-neutral-500 pb-4">
+            <ul className="text-neutral-800 pb-4">
               <li className="flex items-center py-1">
                 <BsCode className="inline text-xl mr-2" /> Basis HTML, CSS,
                 JavaScript en PHP
@@ -168,18 +173,31 @@ export default function Home() {
         </div>
         <h4 className="pb-4">Persoonlijke doelen</h4>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <p className="text-neutral-500">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
-            turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus
-            nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum
-            tellus elit sed risus. Maecenas eget condimentum velit, sit amet
-            feugiat lectus. Class aptent taciti sociosqu ad litora torquent per
-            conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus
-            enim egestas, ac scelerisque ante pulvinar. Donec ut rhoncus ex.
-            Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel bibendum
-            lorem. Morbi convallis convallis diam sit amet lacinia. Aliquam in
-            elementum tellus.
-          </p>
+          <div className="flex flex-col gap-4">
+            <p className="text-neutral-800">
+              Huidig ben ik bezig met het implementeren en verbeteren van mijn
+              dagelijkse gewoontes, ofwel `habits`, om mijn productiviteit op
+              zowel professioneel als persoonlijk vlak te verbeteren. Dit heeft
+              invloed op de kleine dagelijkse gewoontes zoals:
+            </p>
+            <ul className="text-neutral-800 list-disc ml-5">
+              <li>Gezond eten</li>
+              <li>Boek lezen</li>
+              <li>Flossen</li>
+            </ul>
+            <p className="text-neutral-800">
+              Maar ook impact op grotere dagelijkse gewoontes waaronder:
+            </p>
+            <ul className="text-neutral-800 list-disc ml-5">
+              <li>Dagelijkse gewichtstraining</li>
+              <li>Een uur cursus volgen</li>
+              <li>Een consistente ochtend- en avond routine</li>
+            </ul>
+            <p className="text-neutral-800">
+              Als persoonlijke doel wil ik dagelijks een verbeterde versie van
+              mezelf presenteren.
+            </p>
+          </div>
           <img
             src={weightImage}
             alt="Weight"
