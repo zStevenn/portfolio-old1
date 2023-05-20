@@ -9,6 +9,7 @@ import portfolioImage from '../assets/hero-steven.png';
 import mapImage from '../assets/map.png';
 import techStackImage from '../assets/app.png';
 import weightImage from '../assets/weight.png';
+import { Image } from '../components/Image';
 
 export default function Home() {
   return (
@@ -18,25 +19,24 @@ export default function Home() {
         <div className="flex flex-col justify-center gap-4">
           <h3>Heyooo.</h3>
           <p className="text-neutral-800">
-            Software developer met ervaring in Front-End development en UI/UX
-            design. Op zoek naar de volgende uitdaging!
+            Junior software developer met voorkeur naar Frontend development en
+            relevante ervaring in UI/UX design. Op zoek naar de volgende
+            uitdaging!
           </p>
-          <div className="flex gap-6 items-center">
+          <div className="flex flex-col gap-6 sm:w-1/2">
             <Button type="mail">Contact</Button>
-            <div className="flex gap-4">
-              <a
-                className="h-10 w-10 group transition-all duration-300 grid place-items-center rounded-md border border-teal-900 hover:bg-teal-900 hover:shadow-md focus:bg-teal-900 focus:shadow-md"
-                href="https://www.linkedin.com/in/zstevenn/"
-                target="_blank"
-                title="LinkedIn profile"
-                alt="LinkedIn profile"
-              >
-                <BsLinkedin className="text-xl transition-all duration-300 text-teal-900 group-hover:text-neutral-100 group-focus:text-neutral-100" />
-              </a>
-            </div>
+            <a
+              className="h-10 w-10 group transition-all duration-300 grid place-items-center rounded-md border border-teal-900 hover:bg-teal-900 hover:shadow-md focus:bg-teal-900 focus:shadow-md"
+              href="https://www.linkedin.com/in/zstevenn/"
+              target="_blank"
+              title="LinkedIn profile"
+              alt="LinkedIn profile"
+            >
+              <BsLinkedin className="text-xl transition-all duration-300 text-teal-900 group-hover:text-neutral-100 group-focus:text-neutral-100" />
+            </a>
           </div>
         </div>
-        <img src={portfolioImage} alt="Steven Li" title="Steven Li" />
+        <Image imageSrc={portfolioImage} imageTitle="Steven Li" />
       </div>
 
       {/* Projecten */}
@@ -90,7 +90,7 @@ export default function Home() {
                 </Button>
               </div>
             </div>
-            <img src={mapImage} alt="Map" title="Map" className="max-h-64" />
+            <Image imageSrc={mapImage} className="max-h-64" imageTitle="Map" />
           </div>
         </div>
       </div>
@@ -140,11 +140,10 @@ export default function Home() {
               </li>
             </ul>
           </div>
-          <img
-            src={techStackImage}
-            alt="Tech stack"
-            title="Tech stack"
+          <Image
+            imageSrc={techStackImage}
             className="max-h-64"
+            imageTitle="Tech stack"
           />
         </div>
         <h4 className="pb-4">Opleidingen &#38; Certificaten</h4>
@@ -153,21 +152,21 @@ export default function Home() {
             imgSrc="https://via.placeholder.com/400x100"
             imgTitle="Diploma Software developer"
             cardTitle="Diploma Software developer"
-            cardDate="MBO Utrecht - 2019 t/m 2023 - In progressie"
+            cardDate="MBO Utrecht - 2019 t/m 2023 - Volledig afgerond"
             cardButton="disabled"
           />
           <Card
             imgSrc="https://via.placeholder.com/400x100"
             imgTitle="Complete Web &#38; Mobile Designer: UI/UX, Figma + More"
             cardTitle="Complete Web &#38; Mobile Designer: UI/UX, Figma + More"
-            cardDate="Udemy - 2023 - In progressie"
+            cardDate="Udemy - 2023 - Certificaat behaald"
             cardButton="disabled"
           />
           <Card
             imgSrc="https://via.placeholder.com/400x100"
-            imgTitle="Vue - The Complete Guide (incl. Router &#38; Composition API)"
-            cardTitle="Vue - The Complete Guide (incl. Router &#38; Composition API)"
-            cardDate="Udemy - 2023 - Gepland"
+            imgTitle="Next.js &#38; React - The Complete Guide (incl. Two Paths!)"
+            cardTitle="Next.js &#38; React - The Complete Guide (incl. Two Paths!)"
+            cardDate="Udemy - 2023 - Begonnen 16-5-2023"
             cardButton="disabled"
           />
         </div>
@@ -198,11 +197,10 @@ export default function Home() {
               mezelf presenteren.
             </p>
           </div>
-          <img
-            src={weightImage}
-            alt="Weight"
-            title="Weight"
+          <Image
+            imageSrc={weightImage}
             className="max-h-64"
+            imageTitle="Weight"
           />
         </div>
       </div>

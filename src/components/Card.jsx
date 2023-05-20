@@ -1,4 +1,6 @@
 import { Button } from './Button';
+import { useRef, useEffect, useState } from 'react';
+import styles from './Card.module.css';
 
 function Card({
   imgSrc,
@@ -9,8 +11,36 @@ function Card({
   cardLink,
   cardButton = 'enabled',
 }) {
+  const cardRef = useRef(null);
+  const [isIntersecting, setIsIntersecting] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsIntersecting(true);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { root: null, threshold: 0.5 }
+    );
+
+    observer.observe(cardRef.current);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   return (
-    <div className="rounded-md flex flex-col border border-teal-900/30 shadow-md shadow-teal-900/30">
+    <div
+      ref={cardRef}
+      className={`rounded-md flex flex-col border border-teal-900/30 shadow-md shadow-teal-900/30 ${
+        isIntersecting ? styles.cardFadeIn : 'opacity-0'
+      }`}
+    >
       <img
         className="rounded-tr-md rounded-tl-md h-44 object-cover transition-all duration-300 hover:bg-neutral-900/50"
         src={imgSrc}
